@@ -903,8 +903,8 @@ namespace Bricelam.EntityFrameworkCore.Design
         static bool IsCapitalized(string word)
             => !string.IsNullOrEmpty(word) && char.IsUpper(word, 0);
 
-        static bool IsAlphabets(string word)
-            => !(string.IsNullOrEmpty(word.Trim()) || !word.Equals(word.Trim()) || Regex.IsMatch(word, "[^a-zA-Z\\s]"));
+        static bool IsAlphaNumeric(string word)
+            => !(string.IsNullOrEmpty(word.Trim()) || !word.Equals(word.Trim()) || Regex.IsMatch(word, "[^a-zA-Z0-9\\s]"));
 
         bool IsUninflective(string word)
             => DoesWordContainSuffix(word, _uninflectiveSuffixes)
@@ -913,7 +913,7 @@ namespace Bricelam.EntityFrameworkCore.Design
 
         // return true when the word is "[\s]*" or leading or tailing with spaces or contains non alphabetical characters
         bool IsNoOpWord(string word)
-            => !IsAlphabets(word) || word.Length <= 1 || _pronounList.Contains(word.ToLowerInvariant());
+            => !IsAlphaNumeric(word) || word.Length <= 1 || _pronounList.Contains(word.ToLowerInvariant());
 
         bool DoesWordContainSuffix(string word, IEnumerable<string> suffixes)
              => suffixes.Any(s => word.EndsWith(s, true, _culture));
