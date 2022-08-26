@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace Bricelam.EntityFrameworkCore.Design
+namespace Swvincent.EntityFrameworkCore.Design
 {
     public class EFCorePluralizerServicesTests
     {

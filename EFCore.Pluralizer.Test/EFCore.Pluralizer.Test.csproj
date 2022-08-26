@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <AssemblyName>Bricelam.EntityFrameworkCore.Pluralizer.Test</AssemblyName>
-    <RootNamespace>Bricelam.EntityFrameworkCore.Design</RootNamespace>
+    <AssemblyName>Swvincent.EntityFrameworkCore.Pluralizer.Test</AssemblyName>
+    <RootNamespace>Swvincent.EntityFrameworkCore.Design</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

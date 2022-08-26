@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Bricelam.EntityFrameworkCore.Design
+namespace Swvincent.EntityFrameworkCore.Design
 {
     /// <summary>
     /// Used to the configure design-time services for this library.

@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Bricelam.EntityFrameworkCore.Design
+namespace Swvincent.EntityFrameworkCore.Design
 {
     public class PluralizerTests
     {

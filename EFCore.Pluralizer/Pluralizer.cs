@@ -15,6 +15,7 @@
 // Contributors:
 //     Microsoft Open Technologies, Inc. - initial API and implementation
 //     Brice Lambson - simplify and port to EF Core
+//     Scott W. Vincent - allow names with numerals
 
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace Bricelam.EntityFrameworkCore.Design
+namespace Swvincent.EntityFrameworkCore.Design
 {
     /// <summary>
     /// Default pluralization service implementation to be used by Entity Framework. This pluralization service is based on
