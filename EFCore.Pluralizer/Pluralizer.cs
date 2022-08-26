@@ -906,6 +906,9 @@ namespace Bricelam.EntityFrameworkCore.Design
         static bool IsAlphaNumeric(string word)
             => !(string.IsNullOrEmpty(word.Trim()) || !word.Equals(word.Trim()) || Regex.IsMatch(word, "[^a-zA-Z0-9\\s]"));
 
+        static bool EndsWithNumeral(string word)
+            => Regex.IsMatch(word, @"(\d+)$");
+
         bool IsUninflective(string word)
             => DoesWordContainSuffix(word, _uninflectiveSuffixes)
                 || (!word.ToLower(_culture).Equals(word) && word.EndsWith("ese", false, _culture))
@@ -913,7 +916,7 @@ namespace Bricelam.EntityFrameworkCore.Design
 
         // return true when the word is "[\s]*" or leading or tailing with spaces or contains non alphabetical characters
         bool IsNoOpWord(string word)
-            => !IsAlphaNumeric(word) || word.Length <= 1 || _pronounList.Contains(word.ToLowerInvariant());
+            => !IsAlphaNumeric(word) || EndsWithNumeral(word) || word.Length <= 1 || _pronounList.Contains(word.ToLowerInvariant());
 
         bool DoesWordContainSuffix(string word, IEnumerable<string> suffixes)
              => suffixes.Any(s => word.EndsWith(s, true, _culture));

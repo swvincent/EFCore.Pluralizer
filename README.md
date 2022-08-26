@@ -2,8 +2,8 @@ Bricelam.EntityFrameworkCore.Pluralizer
 =======================================
 This project is a working sample that adds design-time pluralization to Entity Framework Core.
 
-*** This particular fork of the original Bricelam.EntityFrameworkCore.Pluralizer supports alphanumeric
-table names, instead of supporting only alpha table names. ***
+**This particular fork of the original Bricelam.EntityFrameworkCore.Pluralizer supports alphanumeric names, instead of
+supporting only alpha names. Names ending in a numeral will not be changed. -Scott W. Vincent**
 
 Usage
 -----
